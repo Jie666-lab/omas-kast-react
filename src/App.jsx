@@ -14,7 +14,7 @@
 */
 
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
@@ -86,7 +86,7 @@ function App() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* Header 所有页面共用 */}
       <Header cartCount={cartCount} />
 
@@ -120,7 +120,7 @@ function App() {
 
       {/* Footer 所有页面共用 */}
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
